@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hash Table Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 Hash Table Visualizer</h1>
+        <p class="subtitle">
+            Learn Hashing through an interactive visualization
+        </p>
+
+        <div class="controls">
+
+            <div class="input-box">
+                <label>Enter Value</label>
+                <input type="number" id="valueInput" placeholder="Example: 25">
+            </div>
+
+            <div class="input-box">
+                <label>Table Size</label>
+                <input type="number" id="sizeInput" value="10" min="5" max="15">
+            </div>
+
+            <button onclick="createTable()">Create Table</button>
+
+            <button class="insert" onclick="insertValue()">
+                ➕ Insert
+            </button>
+
+            <button class="search" onclick="searchValue()">
+                🔍 Search
+            </button>
+
+            <button class="delete" onclick="deleteValue()">
+                🗑️ Delete
+            </button>
+
+            <button class="clear" onclick="clearTable()">
+                🔄 Clear
+            </button>
+
+        </div>
+
+        <div class="formula">
+            <h2>Hash Function</h2>
+            <p>
+                hash(value) = value % table size
+            </p>
+        </div>
+
+        <div id="message">
+            Create a table and start inserting values!
+        </div>
+
+        <div id="hashTable" class="hash-table"></div>
+
+        <div class="info">
+
+            <div>
+                <h3>🟢 Empty</h3>
+                <p>No value stored</p>
+            </div>
+
+            <div>
+                <h3>🔵 Stored</h3>
+                <p>Value inserted</p>
+            </div>
+
+            <div>
+                <h3>🟡 Collision</h3>
+                <p>Collision occurred</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
